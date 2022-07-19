@@ -23,8 +23,7 @@ We captured images with dimmer light as the reference images.
 Synthetic GTA5 nighttime fog data: Wending Yan, Robby T. Tan, Dengxin Dai. "Nighttime Defogging Using High-Low Frequency Decomposition and Grayscale-Color Networks", ECCV, 2020.
 
 4. [Syn-light-effects](https://www.dropbox.com/sh/2sb9na4ur7ry2gf/AAB1-DNxy4Hq6qPU-afYIKVaa?dl=0) <br>
-Synthetic-light-effects data
-
+Synthetic-light-effects data is the implementation of the paper, S. Metari, F. Deschênes, "A New Convolution Kernel for Atmospheric Point Spread Function Applied to Computer Vision", ICCV, 2017.
 
 ### Low-Light Enhancement
 1. [LOL dataset](https://daooshee.github.io/BMVC2018website/) <br>
@@ -33,6 +32,15 @@ LOL: Chen Wei, Wenjing Wang, Wenhan Yang, and Jiaying Liu. "Deep Retinex Decompo
 2. [LOL-Real dataset](https://github.com/flyywh/CVPR-2020-Semi-Low-Light/) <br>
 LOL-real (the extension work): Wenhan Yang, Haofeng Huang, Wenjing Wang, Shiqi Wang, and Jiaying Liu. "Sparse Gradient Regularized Deep Retinex Network for Robust Low-Light Image Enhancement", TIP, 2021. [[Baiduyun (extracted code: l9xm)]](https://pan.baidu.com/s/1U9ePTfeLlnEbr5dtI1tm5g) [[Google Drive]](https://drive.google.com/file/d/1dzuLCk9_gE2bFF222n3-7GVUlSVHpMYC/view?usp=sharing) <br> <br>
 We use LOL-real as it is larger and more diverse.
+
+
+### Low-Light Enhancement Results:
+
+
+
+## Pre-trained Model
+
+
 
 
 ### Citation

@@ -41,7 +41,10 @@ We use LOL-real as it is larger and more diverse.
 
 
 
+## VGG Results:
 
+1. Download the [fine-tuned VGG model](https://www.dropbox.com/s/xzzoruz1i6m7mm0/model_best.tar?dl=0) (fine-tuned on ExDark dataset), put in 
+VGG_code/ckpts/vgg16_featureextractFalse_ExDark/nets/
 
 
 ### Citation

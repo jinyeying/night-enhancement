@@ -10,6 +10,7 @@ Yeying Jin, [Wenhan Yang](https://flyywh.github.io/) and [Robby T. Tan](https://
 
 
 ### Datasets
+### Light-Effects Suppression on Night Data
 1. [Light-effects data](https://www.dropbox.com/sh/ro8fs629ldebzc2/AAD_W78jDffsJhH-smJr0cNSa?dl=0)
 
 Light-effects data is collected from Flickr and by ourselves, with multiple light colors in various scenes.
@@ -24,11 +25,20 @@ We captured images with dimmer light as the reference images.
 Synthetic GTA5 nighttime fog data
 
 
-
 4. [Syn-light-effects](https://www.dropbox.com/sh/2sb9na4ur7ry2gf/AAB1-DNxy4Hq6qPU-afYIKVaa?dl=0)
 
 Synthetic-light-effects data
 
+
+### Low-Light Enhancement
+1. [LOL dataset](https://daooshee.github.io/BMVC2018website/)
+
+LOL: Chen Wei, Wenjing Wang, Wenhan Yang, and Jiaying Liu. "Deep Retinex Decomposition for Low-Light Enhancement", BMVC, 2018. [[Baiduyun (extracted code: sdd0)]](https://pan.baidu.com/s/1spt0kYU3OqsQSND-be4UaA) [[Google Drive]](https://drive.google.com/file/d/18bs_mAREhLipaM2qvhxs7u7ff2VSHet2/view?usp=sharing) <br>
+
+2. [LOL-Real dataset](https://github.com/flyywh/CVPR-2020-Semi-Low-Light/)
+
+LOL-real (the extension work): Wenhan Yang, Haofeng Huang, Wenjing Wang, Shiqi Wang, and Jiaying Liu. "Sparse Gradient Regularized Deep Retinex Network for Robust Low-Light Image Enhancement", TIP, 2021. [[Baiduyun (extracted code: l9xm)]](https://pan.baidu.com/s/1U9ePTfeLlnEbr5dtI1tm5g) [[Google Drive]](https://drive.google.com/file/d/1dzuLCk9_gE2bFF222n3-7GVUlSVHpMYC/view?usp=sharing) <br> <br>
+We use LOL-real as it is larger and more diverse.
 
 
 ### Citation

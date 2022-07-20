@@ -42,11 +42,20 @@ We use LOL-real as it is larger and more diverse.
 ### Results
 1. [LOL-Real Results](https://www.dropbox.com/sh/t6eb4aq025ctnhy/AADRRJNN3u-N8HApe1tFo19Ra?dl=0)<br>
 
-Get the following Table 3 in the main paper on the LOL-Real dataset (100 test images).
+Get the following Table 4 in the main paper on the LOL-Real dataset (100 test images).
 |Learning| Method | PSNR | SSIM | 
 |--------|--------|------|------ |
 | Unsupervised Learning| **Ours** | **25.51** |**0.8015**|
 | N/A | Input | 9.72 | 0.1752|
+
+
+2. [LOL-test Results](https://www.dropbox.com/sh/la21ocjk14dtg9t/AABOBsCQ39Oml33fItqX5koFa?dl=0)<br>
+
+Get the following Table 3 in the main paper on the LOL-test dataset (15 test images).
+|Learning| Method | PSNR | SSIM | 
+|--------|--------|------|------ |
+| Unsupervised Learning| **Ours** | **21.521** |**0.7647**|
+| N/A | Input | 7.773 | 0.1259|
 
 ## VGG Results:
 

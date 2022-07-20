@@ -38,8 +38,15 @@ We use LOL-real as it is larger and more diverse.
 ### Pre-trained Model
 
 1. Download the [pre-trained LOL model](https://www.dropbox.com/s/0ykpsm1d48f74ao/LOL_params_0900000.pt?dl=0), put in results/LOL/model/
-[Results](https://www.dropbox.com/sh/t6eb4aq025ctnhy/AADRRJNN3u-N8HApe1tFo19Ra?dl=0)
 
+### Results
+1. [LOL-Real Results](https://www.dropbox.com/sh/t6eb4aq025ctnhy/AADRRJNN3u-N8HApe1tFo19Ra?dl=0)<br>
+
+Get the following Table 3 in the main paper on the LOL-Real dataset (100 test images).
+|Learning| Method | PSNR | SSIM | 
+|--------|--------|------|------ |
+| Unsupervised Learning| **Ours** | **25.51** |**0.8015**|
+| N/A | Input | 9.72 | 0.1752|
 
 ## VGG Results:
 

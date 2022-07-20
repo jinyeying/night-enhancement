@@ -38,7 +38,7 @@ We use LOL-real as it is larger and more diverse.
 ### Pre-trained Model
 
 1. Download the [pre-trained LOL model](https://www.dropbox.com/s/0ykpsm1d48f74ao/LOL_params_0900000.pt?dl=0), put in results/LOL/model/
-
+[Results](https://www.dropbox.com/sh/t6eb4aq025ctnhy/AADRRJNN3u-N8HApe1tFo19Ra?dl=0)
 
 
 ## VGG Results:

@@ -7,7 +7,7 @@ This is an implementation of the following paper.
 
 Yeying Jin, [Wenhan Yang](https://flyywh.github.io/) and [Robby T. Tan](https://tanrobby.github.io/pub.html)
 
-[![arXiv](https://img.shields.io/badge/arXiv-2012.11806v3-00ff00.svg)](https://arxiv.org/pdf/2207.10564.pdf)
+[![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/pdf/2207.10564.pdf)
 
 ### Abstract
 Night images suffer not only from low light, but also from uneven distributions of light. Most existing night visibility enhancement methods focus mainly on enhancing low-light regions. This inevitably leads to over enhancement and saturation in bright regions, such as those regions affected by light effects (glare, floodlight, etc). To address this problem, we need to suppress the light effects in bright regions while, at the same time, boosting the intensity of dark regions. With this idea in mind, we introduce an unsupervised method that integrates a layer decomposition network and a light-effects suppression network. Given a single night image as input, our decomposition network learns to decompose shading, reflectance and light-effects layers, guided by unsupervised layer-specific prior losses. Our light-effects suppression network further suppresses the light effects and, at the same time, enhances the illumination in dark regions. This light-effects suppression network exploits the estimated light-effects layer as the guidance to focus on the light-effects regions. To recover the background details and reduce hallucination/artefacts, we propose structure and high-frequency consistency losses. Our quantitative and qualitative evaluations on real images show that our method outperforms state-of-the-art methods in suppressing night light effects and boosting the intensity of dark regions.
@@ -16,6 +16,7 @@ Night images suffer not only from low light, but also from uneven distributions 
 ### Light-Effects Suppression on Night Data
 1. [Light-effects data](https://www.dropbox.com/sh/ro8fs629ldebzc2/AAD_W78jDffsJhH-smJr0cNSa?dl=0) <br>
 Light-effects data is collected from Flickr and by ourselves, with multiple light colors in various scenes: Aashish Sharma, Robby T. Tan. "Nighttime Visibility Enhancement by Increasing the Dynamic Range and Suppression of Light Effects", CVPR, 2021.
+
 
 
 2. [LED data](https://www.dropbox.com/sh/7lhpnj2onb8c3dl/AAC-UF1fvJLxvCG-IuYLQ8T4a?dl=0) <br>
@@ -43,14 +44,20 @@ We use LOL-real as it is larger and more diverse.
 1. Download the [pre-trained LOL model](https://www.dropbox.com/s/0ykpsm1d48f74ao/LOL_params_0900000.pt?dl=0), put in results/LOL/model/
 
 ## Results
+![Eg1](teaser/lowlight.PNG)
+
 1. [LOL-Real Results](https://www.dropbox.com/sh/t6eb4aq025ctnhy/AADRRJNN3u-N8HApe1tFo19Ra?dl=0)<br>
 
 Get the following Table 4 in the main paper on the LOL-Real dataset (100 test images).
+
 |Learning| Method | PSNR | SSIM | 
 |--------|--------|------|------ |
 | Unsupervised Learning| **Ours** | **25.51** |**0.8015**|
 | N/A | Input | 9.72 | 0.1752|
 
+<p align="left">
+  <img width="550" src="teaser/LOL_real.PNG">
+</p>
 
 2. [LOL-test Results](https://www.dropbox.com/sh/la21ocjk14dtg9t/AABOBsCQ39Oml33fItqX5koFa?dl=0)<br>
 
@@ -59,6 +66,10 @@ Get the following Table 3 in the main paper on the LOL-test dataset (15 test ima
 |--------|--------|------|------ |
 | Unsupervised Learning| **Ours** | **21.521** |**0.7647**|
 | N/A | Input | 7.773 | 0.1259|
+
+<p align="left">
+  <img width="450" src="teaser/LOL.PNG">
+</p>
 
 ## VGG Results:
 

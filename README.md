@@ -17,17 +17,29 @@ Night images suffer not only from low light, but also from uneven distributions 
 1. [Light-effects data](https://www.dropbox.com/sh/ro8fs629ldebzc2/AAD_W78jDffsJhH-smJr0cNSa?dl=0) <br>
 Light-effects data is collected from Flickr and by ourselves, with multiple light colors in various scenes: Aashish Sharma, Robby T. Tan. "Nighttime Visibility Enhancement by Increasing the Dynamic Range and Suppression of Light Effects", CVPR, 2021.
 
-
-
 2. [LED data](https://www.dropbox.com/sh/7lhpnj2onb8c3dl/AAC-UF1fvJLxvCG-IuYLQ8T4a?dl=0) <br>
 We captured images with dimmer light as the reference images.
+<p align="left">
+  <img width=350" src="teaser/LED.PNG">
+</p>
 
 
 3. [GTA5](https://www.dropbox.com/sh/gfw44ttcu5czrbg/AACr2GZWvAdwYPV0wgs7s00xa?dl=0) <br>
 Synthetic GTA5 nighttime fog data: Wending Yan, Robby T. Tan, Dengxin Dai. "Nighttime Defogging Using High-Low Frequency Decomposition and Grayscale-Color Networks", ECCV, 2020.
 
+<p align="left">
+  <img width=350" src="teaser/GTA5.PNG">
+</p>
+
 4. [Syn-light-effects](https://www.dropbox.com/sh/2sb9na4ur7ry2gf/AAB1-DNxy4Hq6qPU-afYIKVaa?dl=0) <br>
-Synthetic-light-effects data is the implementation of the paper, S. Metari, F. Deschênes, "A New Convolution Kernel for Atmospheric Point Spread Function Applied to Computer Vision", ICCV, 2017.
+Synthetic-light-effects data is the implementation of the paper, S. Metari, F. Deschênes, "A New Convolution Kernel for Atmospheric Point Spread Function Applied to Computer Vision", ICCV, 2017. <br>
+Run the Matlab code to generate Syn-light-effects:
+```
+glow_rendering_code/repro_ICCV2007_Fig5.m
+```
+<p align="left">
+  <img width=350" src="teaser/syn.PNG">
+</p>
 
 ### Low-Light Enhancement
 1. [LOL dataset](https://daooshee.github.io/BMVC2018website/) <br>
@@ -77,7 +89,7 @@ Get the following Table 3 in the main paper on the LOL-test dataset (15 test ima
 VGG_code/ckpts/vgg16_featureextractFalse_ExDark/nets/
 
 
-### Citation
+### Citations
 If light-effects data is useful for your research, please cite our paper. 
 ```
 @inproceedings{sharma2021nighttime,

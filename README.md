@@ -2,7 +2,7 @@
 
 ## Introduction
 This is an implementation of the following paper.
-> Unsupervised Night Image Enhancement: When Layer Decomposition Meets Light-Effects Suppression
+> [Unsupervised Night Image Enhancement: When Layer Decomposition Meets Light-Effects Suppression.](https://arxiv.org/pdf/2207.10564.pdf)
 > European Conference on Computer Vision (ECCV'2022)
 
 Yeying Jin, [Wenhan Yang](https://flyywh.github.io/) and [Robby T. Tan](https://tanrobby.github.io/pub.html)
@@ -56,7 +56,9 @@ We use LOL-real as it is larger and more diverse.
 1. Download the [pre-trained LOL model](https://www.dropbox.com/s/0ykpsm1d48f74ao/LOL_params_0900000.pt?dl=0), put in results/LOL/model/
 
 ## Results
-![Eg1](teaser/lowlight.PNG)
+<p align="left">
+  <img width="750" src="teaser/lowlight.PNG">
+</p>
 
 1. [LOL-Real Results](https://www.dropbox.com/sh/t6eb4aq025ctnhy/AADRRJNN3u-N8HApe1tFo19Ra?dl=0)<br>
 
@@ -82,6 +84,14 @@ Get the following Table 3 in the main paper on the LOL-test dataset (15 test ima
 <p align="left">
   <img width="450" src="teaser/LOL.PNG">
 </p>
+
+# Low-Light Enhancement Results:
+
+<p align="left">
+  <img width="750" src="teaser/light_effects.PNG">
+</p>
+
+
 
 ## VGG Results:
 

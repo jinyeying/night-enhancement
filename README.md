@@ -98,6 +98,11 @@ Get the following Table 3 in the main paper on the LOL-test dataset (15 test ima
 1. Download the [fine-tuned VGG model](https://www.dropbox.com/s/xzzoruz1i6m7mm0/model_best.tar?dl=0) (fine-tuned on ExDark dataset), put in 
 VGG_code/ckpts/vgg16_featureextractFalse_ExDark/nets/
 
+## Summary of Comparisons:
+<p align="left">
+  <img width="550" src="teaser/comparison.png">
+</p>
+
 
 ### Citations
 If light-effects data is useful for your research, please cite our paper. 

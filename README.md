@@ -105,6 +105,16 @@ VGG_code/ckpts/vgg16_featureextractFalse_ExDark/nets/
 
 
 ### Citations
+If this work is useful for your research, please cite our paper. 
+```
+@article{jin2022unsupervised,
+  title={Unsupervised Night Image Enhancement: When Layer Decomposition Meets Light-Effects Suppression},
+  author={Jin, Yeying and Yang, Wenhan and Tan, Robby T},
+  journal={arXiv preprint arXiv:2207.10564},
+  year={2022}
+}
+```
+
 If light-effects data is useful for your research, please cite our paper. 
 ```
 @inproceedings{sharma2021nighttime,

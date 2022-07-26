@@ -105,10 +105,22 @@ Get the following Table 3 in the main paper on the LOL-test dataset (15 test ima
 
 
 
-## VGG Results:
+### Feature Results:
+1. run the MATLAB code to adaptively fuse the three color channels, output I_gray
+```
+checkGrayMerge.m
+```
+<p align="left">
+  <img width="350" src="VGG_code/results_VGGfeatures/DSC01607_I_GrayBest.png">
+</p>
 
-1. Download the [fine-tuned VGG model](https://www.dropbox.com/s/xzzoruz1i6m7mm0/model_best.tar?dl=0) (fine-tuned on ExDark dataset), put in 
-VGG_code/ckpts/vgg16_featureextractFalse_ExDark/nets/
+2. Download the [fine-tuned VGG model](https://www.dropbox.com/s/xzzoruz1i6m7mm0/model_best.tar?dl=0) (fine-tuned on [ExDark (Exclusively Dark Image Dataset)](https://github.com/cs-chan/Exclusively-Dark-Image-Dataset)  ), put in 
+./VGG_code/ckpts/vgg16_featureextractFalse_ExDark/nets/model_best.tar
+
+3. obtain structure features
+```
+python test_VGGfeatures.py
+```
 
 ## Summary of Comparisons:
 <p align="left">

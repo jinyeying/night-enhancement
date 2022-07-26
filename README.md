@@ -53,7 +53,13 @@ We use LOL-real as it is larger and more diverse.
 # Low-Light Enhancement Results:
 ## Pre-trained Model
 
-1. Download the [pre-trained LOL model](https://www.dropbox.com/s/0ykpsm1d48f74ao/LOL_params_0900000.pt?dl=0), put in results/LOL/model/
+1. Download the [pre-trained LOL model](https://www.dropbox.com/s/0ykpsm1d48f74ao/LOL_params_0900000.pt?dl=0), put in ./results/LOL/model/
+2. Put the test images in ./LOL/ 
+
+## Test
+```
+python main.py
+```
 
 ## Results
 <p align="left">
@@ -84,6 +90,8 @@ Get the following Table 3 in the main paper on the LOL-test dataset (15 test ima
 <p align="left">
   <img width="450" src="teaser/LOL.PNG">
 </p>
+
+
 
 # Low-Light Enhancement Results:
 

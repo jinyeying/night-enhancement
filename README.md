@@ -15,7 +15,11 @@ Night images suffer not only from low light, but also from uneven distributions 
 ## Datasets
 ### Light-Effects Suppression on Night Data
 1. [Light-effects data](https://www.dropbox.com/sh/ro8fs629ldebzc2/AAD_W78jDffsJhH-smJr0cNSa?dl=0) <br>
-Light-effects data is collected from Flickr and by ourselves, with multiple light colors in various scenes: Aashish Sharma, Robby T. Tan. "Nighttime Visibility Enhancement by Increasing the Dynamic Range and Suppression of Light Effects", CVPR, 2021.
+Light-effects data is collected from Flickr and by ourselves, with multiple light colors in various scenes: Aashish Sharma, Robby T. Tan. ["Nighttime Visibility Enhancement by Increasing the Dynamic Range and Suppression of Light Effects"](https://openaccess.thecvf.com/content/CVPR2021/papers/Sharma_Nighttime_Visibility_Enhancement_by_Increasing_the_Dynamic_Range_and_Suppression_CVPR_2021_paper.pdf), CVPR, 2021.
+
+<p align="left">
+  <img width=950" src="teaser/self-collected.png">
+</p>
 
 2. [LED data](https://www.dropbox.com/sh/7lhpnj2onb8c3dl/AAC-UF1fvJLxvCG-IuYLQ8T4a?dl=0) <br>
 We captured images with dimmer light as the reference images.
@@ -25,7 +29,7 @@ We captured images with dimmer light as the reference images.
 
 
 3. [GTA5](https://www.dropbox.com/sh/gfw44ttcu5czrbg/AACr2GZWvAdwYPV0wgs7s00xa?dl=0) <br>
-Synthetic GTA5 nighttime fog data: Wending Yan, Robby T. Tan, Dengxin Dai. "Nighttime Defogging Using High-Low Frequency Decomposition and Grayscale-Color Networks", ECCV, 2020.
+Synthetic GTA5 nighttime fog data: Wending Yan, Robby T. Tan, Dengxin Dai. ["Nighttime Defogging Using High-Low Frequency Decomposition and Grayscale-Color Networks"](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123570460.pdf), ECCV, 2020.
 
 <p align="left">
   <img width=350" src="teaser/GTA5.PNG">

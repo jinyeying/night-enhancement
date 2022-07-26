@@ -1,13 +1,3 @@
-"""
-Tutorials/Helpers
-https://pytorch.org/tutorials/beginner/finetuning_torchvision_models_tutorial.html
-"""
-
-"""
-ExDark dataset
-http://cs-chan.com/doc/cviu.pdf
-"""
-
 from __future__ import print_function
 from __future__ import division
 import torch

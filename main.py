@@ -16,7 +16,7 @@ def parse_args():
 
     parser.add_argument('--lr', type=float, default=0.0001, help='The learning rate')
     parser.add_argument('--weight_decay', type=float, default=0.0001, help='The weight decay')
-    parser.add_argument('--dom_weight', type=int, default=0.5, help='Weight for classification')
+    parser.add_argument('--atten_weight', type=int, default=0.5, help='Weight for Attention Loss')
     parser.add_argument('--use_gray_feat_loss', type=str2bool, default=True, help='use Structure and HF-Features Consistency Losses')
     parser.add_argument('--feat_weight', type=int, default=1, help='Weight for Structure and HF-Features Consistency Losses')
     parser.add_argument('--adv_weight', type=int, default=1, help='Weight for GAN Loss')

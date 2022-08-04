@@ -25,7 +25,7 @@ class ENHANCENET(object) :
 
         self.adv_weight = args.adv_weight
         self.identity_weight = args.identity_weight
-        self.dom_weight = args.dom_weight
+        self.atten_weight = args.atten_weight
         self.use_gray_feat_loss = args.use_gray_feat_loss
         if args.use_gray_feat_loss == True:
             self.feat_weight = args.feat_weight

@@ -37,15 +37,11 @@ class Vgg16ExDark(torch.nn.Module):
             print('Vgg16ExDark initialized with %s'% load_model)
             model_state_dict = torch.load(load_model)
             model_dict       = self.vgg_pretrained_features.state_dict()
-            # The checkpoint has keys wuth 'module.features.',
-            # for k, v in model_state_dict.items():
-                # print(k[16:])
             model_state_dict = {k[16:]: v for k, v in model_state_dict.items() if k[16:] in model_dict}
             self.vgg_pretrained_features.load_state_dict(model_state_dict)
         if not requires_grad:
             for param in self.parameters():
                 param.requires_grad = False
-                # print(param, param.requires_grad)
 
     def forward(self, X, indices=None):
         if indices is None:
@@ -58,12 +54,7 @@ class Vgg16ExDark(torch.nn.Module):
             if i in indices:
                 out.append(X)
         return out
-
-"""
-Tutorials/Helpers
-https://gist.github.com/brucemuller/37906a86526f53ec7f50af4e77d025c9
-https://towardsdatascience.com/pytorch-implementation-of-perceptual-losses-for-real-time-style-transfer-8d608e2e9902
-"""
+    
 class PerceptualLossVgg16ExDark(nn.Module):
     def __init__(self, vgg=None, load_model=None, gpu_ids=[0], weights=None, indices=None, normalize=True):
         super(PerceptualLossVgg16ExDark, self).__init__()        
@@ -87,6 +78,5 @@ class PerceptualLossVgg16ExDark(nn.Module):
         x_vgg, y_vgg = self.vgg(x, self.indices), self.vgg(y, self.indices)
         loss = 0
         for i in range(len(x_vgg)):
-            # print(len(x_vgg), x_vgg[0].size(), y_vgg[0].size())
             loss += self.weights[i] * self.criterion(x_vgg[i], y_vgg[i].detach())
         return loss

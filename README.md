@@ -99,7 +99,12 @@ Get the following Table 3 in the main paper on the LOL-test dataset (15 test ima
 
 
 
-# Low-Light Enhancement Results:
+# Light-Effects Suppression Results:
+
+## Demo
+```
+python demo.py
+```
 
 <p align="left">
   <img width="750" src="teaser/light_effects.PNG">

@@ -87,6 +87,10 @@ Get the following Table 4 in the main paper on the LOL-Real dataset (100 test im
   <img width="550" src="teaser/LOL_real.PNG">
 </p>
 
+[Update]: Re-train (train from scratch) in LOL_V2_real (698 train images）, and test on [LOL_V2_real](https://www.dropbox.com/sh/7t1qgl4anlqcvle/AAAyOUHMoG5IkzCX5GQDPd1Oa?dl=0) (100 test images).<br>
+PSNR: 20.85 (vs EnlightenGAN's 18.23), SSIM: 0.7243 (vs EnlightenGAN's 0.61)
+[pre-trained LOL_V2 model](https://www.dropbox.com/sh/7t1qgl4anlqcvle/AAAyOUHMoG5IkzCX5GQDPd1Oa?dl=0)
+
 2. [LOL-test Results](https://www.dropbox.com/sh/la21ocjk14dtg9t/AABOBsCQ39Oml33fItqX5koFa?dl=0)<br>
 
 Get the following Table 3 in the main paper on the LOL-test dataset (15 test images).

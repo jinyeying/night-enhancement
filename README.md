@@ -148,11 +148,13 @@ python test_VGGfeatures.py
 ### Citations
 If this work is useful for your research, please cite our paper. 
 ```
-@article{jin2022unsupervised,
-  title={Unsupervised Night Image Enhancement: When Layer Decomposition Meets Light-Effects Suppression},
+@inproceedings{jin2022unsupervised,
+  title={Unsupervised night image enhancement: When layer decomposition meets light-effects suppression},
   author={Jin, Yeying and Yang, Wenhan and Tan, Robby T},
-  journal={arXiv preprint arXiv:2207.10564},
-  year={2022}
+  booktitle={European Conference on Computer Vision},
+  pages={404--421},
+  year={2022},
+  organization={Springer}
 }
 ```
 

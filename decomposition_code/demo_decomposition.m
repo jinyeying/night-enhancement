@@ -11,8 +11,7 @@ imgname = 'DSC00637'
 % imgname = 'DSC01257_input'
 % imgname = 'DSC01607_input'
 % imgname = 'g'
-%input_i = im2double(imread(['.\light-effects\' imgname '.JPG']));
-input_i = im2double(imread(['/Users/yeyingjin/Dropbox/nighttime/night-enhancement-main/decomposition_code/light-effects/DSC00637.JPG']));
+input_i = im2double(imread(['.\light-effects\' imgname '.JPG']));
 [H W D] = size(input_i);
 [J g] = sept(input_i, 50, zeros(H,W,D), input_i);
 [j G] = sept(input_i, 25000, zeros(H,W,D), input_i);
@@ -20,8 +19,8 @@ if(strcmp(imgname, 'g'))
     [j G] = septRelSmo(input_i, 500, zeros(H,W,D), input_i);
 end
 
-%post = false; % Three layers?
-post = true
+post = false; % Three layers?
+%post = true
 if post
     para.lambda = .15; 
     para.sigma = 2; 

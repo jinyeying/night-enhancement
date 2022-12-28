@@ -20,6 +20,11 @@ This is an implementation of the following paper.
 ### Abstract
 Night images suffer not only from low light, but also from uneven distributions of light. Most existing night visibility enhancement methods focus mainly on enhancing low-light regions. This inevitably leads to over enhancement and saturation in bright regions, such as those regions affected by light effects (glare, floodlight, etc). To address this problem, we need to suppress the light effects in bright regions while, at the same time, boosting the intensity of dark regions. With this idea in mind, we introduce an unsupervised method that integrates a layer decomposition network and a light-effects suppression network. Given a single night image as input, our decomposition network learns to decompose shading, reflectance and light-effects layers, guided by unsupervised layer-specific prior losses. Our light-effects suppression network further suppresses the light effects and, at the same time, enhances the illumination in dark regions. This light-effects suppression network exploits the estimated light-effects layer as the guidance to focus on the light-effects regions. To recover the background details and reduce hallucination/artefacts, we propose structure and high-frequency consistency losses. Our quantitative and qualitative evaluations on real images show that our method outperforms state-of-the-art methods in suppressing night light effects and boosting the intensity of dark regions.
 
+## Prerequisites
+conda env create -f night.yml
+
+conda activate night
+
 ## Datasets
 ### Light-Effects Suppression on Night Data
 1. [Light-effects data](https://www.dropbox.com/sh/ro8fs629ldebzc2/AAD_W78jDffsJhH-smJr0cNSa?dl=0) <br>

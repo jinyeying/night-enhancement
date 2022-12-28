@@ -110,16 +110,23 @@ Get the following Table 3 in the main paper on the LOL-test dataset (15 test ima
 
 
 # Light-Effects Suppression Results:
+[Update] We have released decomposition code on Dec 28, 2022. 
+run the code to layer decomposition, output light-effects layer, initial background layer.    
+```
+demo_decomposition.m
+```
+<p align="left">
+  <img width="550" src="teaser/decomposition.png">
+</p>
 
 ## Demo
+[Update] We have released demo code on Dec 28, 2022.
 ```
 python demo.py
 ```
-
 <p align="left">
-  <img width="750" src="teaser/light_effects.PNG">
+  <img width="650" src="teaser/light_effects.PNG">
 </p>
-
 
 
 ### Feature Results:

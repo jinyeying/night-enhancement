@@ -17,7 +17,8 @@ from torchvision import utils as vutils
 import load_data as DA
 from Net import *
 from guided_filter_pytorch.guided_filter import GuidedFilter
-from skimage.measure import compare_psnr, compare_ssim
+from skimage.metrics import peak_signal_noise_ratio as compare_psnr
+from skimage.metrics import structural_similarity as compare_ssim
 
 def get_arguments():
     parser = argparse.ArgumentParser()

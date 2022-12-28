@@ -124,6 +124,8 @@ demo_decomposition.m
 
 [Light-Effects Results](https://www.dropbox.com/sh/d7myjujl9gwotkz/AAA0iSsO1FbWqNkbB6QR-sLCa?dl=0)
 
+[Shading Results](https://www.dropbox.com/sh/venya8tvetyiv07/AABud1xlWGVquKptBsIZ0jxpa?dl=0)
+
 <p align="left">
   <img width="550" src="teaser/decomposition.png">
 </p>

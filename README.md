@@ -10,8 +10,8 @@ This is an implementation of the following paper.
 [[Paper]](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136970396.pdf)
 [[Supplementary]](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136970396-supp.pdf)
 [![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/pdf/2207.10564.pdf)
-[[Poster]](./poster_video/0982_poster.pdf) 
-[[Slides]](./poster_video/0982_release.pdf) 
+[[Poster]](https://www.dropbox.com/s/t53xlojok9h3p3p/0982_poster.pdf?dl=0) 
+[[Slides]](https://www.dropbox.com/s/grnbrl59fji69wj/0982_slides.pdf?dl=0) 
 [[Video]](https://www.dropbox.com/s/dn0hswof5scsj9z/0982.mp4?dl=0)
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/unsupervised-night-image-enhancement-when/low-light-image-enhancement-on-lol)](https://paperswithcode.com/sota/low-light-image-enhancement-on-lol?p=unsupervised-night-image-enhancement-when)

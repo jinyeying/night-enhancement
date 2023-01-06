@@ -60,7 +60,7 @@ class ENHANCENET(object) :
         self.disLA = Discriminator(input_nc=3, ndf=self.ch, n_layers=5).to(self.device)
 
     def load(self, dir, step):
-        params = torch.load(os.path.join(dir, self.dataset + '_params_%07d.pt' % step))
+        params = torch.load(os.path.join(dir, self.dataset + '_params_%07d.pt' % step), map_location=torch.device(self.device))
         self.genA2B.load_state_dict(params['genA2B'])
         self.disGA.load_state_dict(params['disGA'])
         self.disLA.load_state_dict(params['disLA'])

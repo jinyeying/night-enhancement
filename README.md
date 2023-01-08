@@ -9,7 +9,7 @@ This is an implementation of the following paper.
 
 [[Paper]](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136970396.pdf)
 [[Supplementary]](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136970396-supp.pdf)
-[![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/pdf/2207.10564.pdf)
+[![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2207.10564)
 [[Poster]](https://www.dropbox.com/s/t53xlojok9h3p3p/0982_poster.pdf?dl=0) 
 [[Slides]](https://www.dropbox.com/s/z2u4zx6u1aojiuz/0982_slides.pdf?dl=0) 
 [[Video]](https://www.dropbox.com/s/dn0hswof5scsj9z/0982.mp4?dl=0)

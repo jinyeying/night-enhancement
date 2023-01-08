@@ -11,8 +11,9 @@ This is an implementation of the following paper.
 [[Supplementary]](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136970396-supp.pdf)
 [![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/pdf/2207.10564.pdf)
 [[Poster]](https://www.dropbox.com/s/t53xlojok9h3p3p/0982_poster.pdf?dl=0) 
-[[Slides]](https://www.dropbox.com/s/grnbrl59fji69wj/0982_slides.pdf?dl=0) 
+[[Slides]](https://www.dropbox.com/s/z2u4zx6u1aojiuz/0982_slides.pdf?dl=0) 
 [[Video]](https://www.dropbox.com/s/dn0hswof5scsj9z/0982.mp4?dl=0)
+[[Link]](https://mp.weixin.qq.com/s/5wjV6R95SrQHXxqMnENAAw)
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/unsupervised-night-image-enhancement-when/low-light-image-enhancement-on-lol)](https://paperswithcode.com/sota/low-light-image-enhancement-on-lol?p=unsupervised-night-image-enhancement-when)
 [![Replicate](https://replicate.com/cjwbw/night-enhancement/badge)](https://replicate.com/cjwbw/night-enhancement)
@@ -147,7 +148,7 @@ checkGrayMerge.m
   <img width="350" src="VGG_code/results_VGGfeatures/DSC01607_I_GrayBest.png">
 </p>
 
-2. Download the [fine-tuned VGG model](https://www.dropbox.com/s/xzzoruz1i6m7mm0/model_best.tar?dl=0) (fine-tuned on [ExDark (Exclusively Dark Image Dataset)](https://github.com/cs-chan/Exclusively-Dark-Image-Dataset)  ), put in 
+2. Download the [fine-tuned VGG model](https://www.dropbox.com/s/xzzoruz1i6m7mm0/model_best.tar?dl=0) (fine-tuned on [ExDark (Exclusively Dark Image Dataset)](https://github.com/cs-chan/Exclusively-Dark-Image-Dataset)), put in 
 ./VGG_code/ckpts/vgg16_featureextractFalse_ExDark/nets/model_best.tar
 
 3. obtain structure features

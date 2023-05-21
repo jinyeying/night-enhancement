@@ -2,8 +2,8 @@
 
 ## Introduction
 This is an implementation of the following paper.
-> [Unsupervised Night Image Enhancement: When Layer Decomposition Meets Light-Effects Suppression.](https://arxiv.org/pdf/2207.10564.pdf)
-> European Conference on Computer Vision (ECCV'2022)
+> [Unsupervised Night Image Enhancement: When Layer Decomposition Meets Light-Effects Suppression.](https://arxiv.org/pdf/2207.10564.pdf)\
+> European Conference on Computer Vision (`ECCV2022`)
 
 [Yeying Jin](https://jinyeying.github.io/), [Wenhan Yang](https://flyywh.github.io/) and [Robby T. Tan](https://tanrobby.github.io/pub.html)
 
@@ -24,7 +24,9 @@ Night images suffer not only from low light, but also from uneven distributions 
 ### Light-Effects Suppression on Night Data
 1. [Light-effects data](https://www.dropbox.com/sh/ro8fs629ldebzc2/AAD_W78jDffsJhH-smJr0cNSa?dl=0) <br>
 Light-effects data is collected from Flickr and by ourselves, with multiple light colors in various scenes: <br>
-Aashish Sharma, Robby T. Tan. ["Nighttime Visibility Enhancement by Increasing the Dynamic Range and Suppression of Light Effects"](https://openaccess.thecvf.com/content/CVPR2021/papers/Sharma_Nighttime_Visibility_Enhancement_by_Increasing_the_Dynamic_Range_and_Suppression_CVPR_2021_paper.pdf), CVPR, 2021.
+* `CVPR2021`
+*Nighttime Visibility Enhancement by Increasing the Dynamic Range and Suppression of Light Effects* [[Paper](https://openaccess.thecvf.com/content/CVPR2021/papers/Sharma_Nighttime_Visibility_Enhancement_by_Increasing_the_Dynamic_Range_and_Suppression_CVPR_2021_paper.pdf)]\
+[Aashish Sharma](https://aasharma90.github.io/) and [Robby T. Tan](https://tanrobby.github.io/pub.html)
 
 <p align="left">
   <img width=950" src="teaser/self-collected.png">
@@ -39,7 +41,9 @@ We captured images with dimmer light as the reference images.
 
 3. [GTA5 nighttime fog](https://www.dropbox.com/sh/gfw44ttcu5czrbg/AACr2GZWvAdwYPV0wgs7s00xa?dl=0) <br>
 Synthetic GTA5 nighttime fog data:<br> 
-Wending Yan, Robby T. Tan, Dengxin Dai. ["Nighttime Defogging Using High-Low Frequency Decomposition and Grayscale-Color Networks"](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123570460.pdf), ECCV, 2020.
+* `ECCV2020`
+*Nighttime Defogging Using High-Low Frequency Decomposition and Grayscale-Color Networks* [[Paper](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123570460.pdf)]\
+Wending Yan, [Robby T. Tan](https://tanrobby.github.io/pub.html) and [Dengxin Dai](https://vas.mpi-inf.mpg.de/) 
 
 <p align="left">
   <img width=350" src="teaser/GTA5.PNG">
@@ -57,6 +61,35 @@ glow_rendering_code/repro_ICCV2007_Fig5.m
 </p>
 
 # Light-Effects Suppression Results:
+## Pre-trained Model
+[Update] We have released light-effects suppression code and checkpoint on May 21, 2023. 
+1. Download the [pre-trained de-light-effects model](https://www.dropbox.com/s/9fif8itsu06quvn/delighteffects_params_0600000.pt?dl=0), put in ./results/delighteffects/model/
+2. Put the test images in ./light-effects/
+
+## Test
+```
+python main_delighteffects.py
+```
+
+## Demo
+[Update] We have released demo_all.html and demo_all.ipynb code on May 21, 2023. 
+
+Input are in ./light-effects/, Output are in ./light-effects-output/
+```
+demo_all.ipynb
+```
+<p align="left">
+  <img width="950" src="teaser/light_effects.PNG">
+</p>
+
+
+
+[Update] We have released demo code on Dec 28, 2022.
+```
+python demo.py
+```
+
+## Decomposition
 [Update] We have released decomposition code on Dec 28, 2022. 
 run the code to layer decomposition, output light-effects layer, initial background layer.    
 ```
@@ -69,22 +102,6 @@ demo_decomposition.m
 <p align="left">
   <img width="550" src="teaser/decomposition.png">
 </p>
-
-## Demo
-[Update] We have released demo_all.html and demo_all.ipynb code on May 21, 2023.
-Input are in ./light-effects/, Output are in ./light-effects-output/
-<p align="left">
-  <img width="650" src="teaser/light_effects.PNG">
-</p>
-
-```
-demo_all.ipynb or python demo_all.py
-```
-
-[Update] We have released demo code on Dec 28, 2022.
-```
-python demo.py
-```
 
 ### Feature Results:
 1. run the MATLAB code to adaptively fuse the three color channels, output I_gray

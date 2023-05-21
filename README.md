@@ -66,7 +66,7 @@ glow_rendering_code/repro_ICCV2007_Fig5.m
 1. Download the [pre-trained de-light-effects model](https://www.dropbox.com/s/9fif8itsu06quvn/delighteffects_params_0600000.pt?dl=0), put in ./results/delighteffects/model/
 2. Put the test images in ./light-effects/
 
-## Test
+## Light-effects Suppression Test
 ```
 python main_delighteffects.py
 ```
@@ -141,7 +141,7 @@ We use LOL-real as it is larger and more diverse.
 1. Download the [pre-trained LOL model](https://www.dropbox.com/s/0ykpsm1d48f74ao/LOL_params_0900000.pt?dl=0), put in ./results/LOL/model/
 2. Put the test images in ./LOL/ 
 
-## Test
+## Low-light Enhancement Test
 ```
 python main.py
 ```

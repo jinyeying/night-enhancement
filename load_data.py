@@ -7,7 +7,6 @@ import random
 from PIL import Image, ImageOps
 import numpy as np
 import cv2
-import random
 from scipy.interpolate import interp1d
 
 IMG_EXTENSIONS = [

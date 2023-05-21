@@ -20,11 +20,6 @@ This is an implementation of the following paper.
 ### Abstract
 Night images suffer not only from low light, but also from uneven distributions of light. Most existing night visibility enhancement methods focus mainly on enhancing low-light regions. This inevitably leads to over enhancement and saturation in bright regions, such as those regions affected by light effects (glare, floodlight, etc). To address this problem, we need to suppress the light effects in bright regions while, at the same time, boosting the intensity of dark regions. With this idea in mind, we introduce an unsupervised method that integrates a layer decomposition network and a light-effects suppression network. Given a single night image as input, our decomposition network learns to decompose shading, reflectance and light-effects layers, guided by unsupervised layer-specific prior losses. Our light-effects suppression network further suppresses the light effects and, at the same time, enhances the illumination in dark regions. This light-effects suppression network exploits the estimated light-effects layer as the guidance to focus on the light-effects regions. To recover the background details and reduce hallucination/artefacts, we propose structure and high-frequency consistency losses. Our quantitative and qualitative evaluations on real images show that our method outperforms state-of-the-art methods in suppressing night light effects and boosting the intensity of dark regions.
 
-## Prerequisites
-conda env create -f night.yml
-
-conda activate night
-
 ## Datasets
 ### Light-Effects Suppression on Night Data
 1. [Light-effects data](https://www.dropbox.com/sh/ro8fs629ldebzc2/AAD_W78jDffsJhH-smJr0cNSa?dl=0) <br>
@@ -60,6 +55,59 @@ glow_rendering_code/repro_ICCV2007_Fig5.m
 <p align="left">
   <img width=350" src="teaser/syn.PNG">
 </p>
+
+# Light-Effects Suppression Results:
+[Update] We have released decomposition code on Dec 28, 2022. 
+run the code to layer decomposition, output light-effects layer, initial background layer.    
+```
+demo_decomposition.m
+```
+[Background Results](https://www.dropbox.com/sh/bis4350df85gz0e/AAC7wY92U9K5JW3aSaD0mvcya?dl=0) | 
+[Light-Effects Results](https://www.dropbox.com/sh/d7myjujl9gwotkz/AAA0iSsO1FbWqNkbB6QR-sLCa?dl=0) |
+[Shading Results](https://www.dropbox.com/sh/venya8tvetyiv07/AABud1xlWGVquKptBsIZ0jxpa?dl=0)
+
+<p align="left">
+  <img width="550" src="teaser/decomposition.png">
+</p>
+
+## Demo
+[Update] We have released demo_all.html and demo_all.ipynb code on May 21, 2023.
+Input are in ./light-effects/, Output are in ./light-effects-output/
+<p align="left">
+  <img width="650" src="teaser/light_effects.PNG">
+</p>
+
+```
+demo_all.ipynb or python demo_all.py
+```
+
+[Update] We have released demo code on Dec 28, 2022.
+```
+python demo.py
+```
+
+### Feature Results:
+1. run the MATLAB code to adaptively fuse the three color channels, output I_gray
+```
+checkGrayMerge.m
+```
+<p align="left">
+  <img width="350" src="VGG_code/results_VGGfeatures/DSC01607_I_GrayBest.png">
+</p>
+
+2. Download the [fine-tuned VGG model](https://www.dropbox.com/s/xzzoruz1i6m7mm0/model_best.tar?dl=0) (fine-tuned on [ExDark (Exclusively Dark Image Dataset)](https://github.com/cs-chan/Exclusively-Dark-Image-Dataset)), put in 
+./VGG_code/ckpts/vgg16_featureextractFalse_ExDark/nets/model_best.tar
+
+3. obtain structure features
+```
+python test_VGGfeatures.py
+```
+
+## Summary of Comparisons:
+<p align="left">
+  <img width="550" src="teaser/comparison.png">
+</p>
+
 
 ### Low-Light Enhancement
 1. [LOL dataset](https://daooshee.github.io/BMVC2018website/) <br>
@@ -113,54 +161,6 @@ Get the following Table 3 in the main paper on the LOL-test dataset (15 test ima
 
 <p align="left">
   <img width="450" src="teaser/LOL.PNG">
-</p>
-
-
-
-# Light-Effects Suppression Results:
-[Update] We have released decomposition code on Dec 28, 2022. 
-run the code to layer decomposition, output light-effects layer, initial background layer.    
-```
-demo_decomposition.m
-```
-[Background Results](https://www.dropbox.com/sh/bis4350df85gz0e/AAC7wY92U9K5JW3aSaD0mvcya?dl=0) | 
-[Light-Effects Results](https://www.dropbox.com/sh/d7myjujl9gwotkz/AAA0iSsO1FbWqNkbB6QR-sLCa?dl=0) |
-[Shading Results](https://www.dropbox.com/sh/venya8tvetyiv07/AABud1xlWGVquKptBsIZ0jxpa?dl=0)
-
-<p align="left">
-  <img width="550" src="teaser/decomposition.png">
-</p>
-
-## Demo
-[Update] We have released demo code on Dec 28, 2022.
-```
-python demo.py
-```
-<p align="left">
-  <img width="650" src="teaser/light_effects.PNG">
-</p>
-
-
-### Feature Results:
-1. run the MATLAB code to adaptively fuse the three color channels, output I_gray
-```
-checkGrayMerge.m
-```
-<p align="left">
-  <img width="350" src="VGG_code/results_VGGfeatures/DSC01607_I_GrayBest.png">
-</p>
-
-2. Download the [fine-tuned VGG model](https://www.dropbox.com/s/xzzoruz1i6m7mm0/model_best.tar?dl=0) (fine-tuned on [ExDark (Exclusively Dark Image Dataset)](https://github.com/cs-chan/Exclusively-Dark-Image-Dataset)), put in 
-./VGG_code/ckpts/vgg16_featureextractFalse_ExDark/nets/model_best.tar
-
-3. obtain structure features
-```
-python test_VGGfeatures.py
-```
-
-## Summary of Comparisons:
-<p align="left">
-  <img width="550" src="teaser/comparison.png">
 </p>
 
 

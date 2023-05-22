@@ -183,7 +183,7 @@ Get the following Table 3 in the main paper on the LOL-test dataset (15 test ima
 
 ### Citations
 If this work is useful for your research, please cite our paper. 
-```
+```BibTeX
 @inproceedings{jin2022unsupervised,
   title={Unsupervised night image enhancement: When layer decomposition meets light-effects suppression},
   author={Jin, Yeying and Yang, Wenhan and Tan, Robby T},
@@ -195,7 +195,7 @@ If this work is useful for your research, please cite our paper.
 ```
 
 If light-effects data is useful for your research, please cite our paper. 
-```
+```BibTeX
 @inproceedings{sharma2021nighttime,
 	title={Nighttime Visibility Enhancement by Increasing the Dynamic Range and Suppression of Light Effects},
 	author={Sharma, Aashish and Tan, Robby T},
@@ -206,7 +206,7 @@ If light-effects data is useful for your research, please cite our paper.
 ```
 
 If GTA5 nighttime fog data is useful for your research, please cite our paper. 
-```
+```BibTeX
 @inproceedings{yan2020nighttime,
 	title={Nighttime defogging using high-low frequency decomposition and grayscale-color networks},
 	author={Yan, Wending and Tan, Robby T and Dai, Dengxin},

@@ -50,7 +50,7 @@ Wending Yan, [Robby T. Tan](https://tanrobby.github.io/pub.html) and [Dengxin Da
 </p>
 
 4. [Syn-light-effects](https://www.dropbox.com/sh/2sb9na4ur7ry2gf/AAB1-DNxy4Hq6qPU-afYIKVaa?dl=0) <br>
-Synthetic-light-effects data is the implementation of the paper, <br>
+Synthetic-light-effects data is the implementation of the paper:<br>
 * `ICCV2017`
 *A New Convolution Kernel for Atmospheric Point Spread Function Applied to Computer Vision* [[Paper](https://ieeexplore.ieee.org/document/4408899)]\
 Run the Matlab code to generate Syn-light-effects:
@@ -63,7 +63,7 @@ glow_rendering_code/repro_ICCV2007_Fig5.m
 
 # Light-Effects Suppression Results:
 ## Pre-trained Model
-[Update] We have released light-effects suppression code and checkpoint on May 21, 2023. 
+[Update] We released the light-effects suppression code and checkpoint on May 21, 2023. 
 1. Download the [pre-trained de-light-effects model](https://www.dropbox.com/s/9fif8itsu06quvn/delighteffects_params_0600000.pt?dl=0), put in ./results/delighteffects/model/
 2. Put the test images in ./light-effects/
 
@@ -85,14 +85,14 @@ demo_all.ipynb
 
 
 
-[Update] We have released demo code on Dec 28, 2022.
+[Update] We released the demo code on Dec 28, 2022.
 ```
 python demo.py
 ```
 
 ## Decomposition
-[Update] We have released decomposition code on Dec 28, 2022. 
-run the code to layer decomposition, output light-effects layer, initial background layer.    
+[Update] We released the decomposition code on Dec 28, 2022. 
+Run the code to decomposition layers, output light-effects layer, and initial background layer.    
 ```
 demo_decomposition.m
 ```
@@ -105,7 +105,7 @@ demo_decomposition.m
 </p>
 
 ### Feature Results:
-1. run the MATLAB code to adaptively fuse the three color channels, output I_gray
+1. Run the MATLAB code to adaptively fuse the three color channels, and output I_gray.
 ```
 checkGrayMerge.m
 ```
@@ -116,7 +116,7 @@ checkGrayMerge.m
 2. Download the [fine-tuned VGG model](https://www.dropbox.com/s/xzzoruz1i6m7mm0/model_best.tar?dl=0) (fine-tuned on [ExDark (Exclusively Dark Image Dataset)](https://github.com/cs-chan/Exclusively-Dark-Image-Dataset)), put in 
 ./VGG_code/ckpts/vgg16_featureextractFalse_ExDark/nets/model_best.tar
 
-3. obtain structure features
+3. Obtain structure features.
 ```
 python test_VGGfeatures.py
 ```
@@ -195,7 +195,7 @@ If this work is useful for your research, please cite our paper.
 }
 ```
 
-If light-effects data is useful for your research, please cite our paper. 
+If light-effects data is useful for your research, please cite the paper. 
 ```BibTeX
 @inproceedings{sharma2021nighttime,
 	title={Nighttime Visibility Enhancement by Increasing the Dynamic Range and Suppression of Light Effects},
@@ -206,7 +206,7 @@ If light-effects data is useful for your research, please cite our paper.
 }
 ```
 
-If GTA5 nighttime fog data is useful for your research, please cite our paper. 
+If GTA5 nighttime fog data is useful for your research, please cite the paper. 
 ```BibTeX
 @inproceedings{yan2020nighttime,
 	title={Nighttime defogging using high-low frequency decomposition and grayscale-color networks},

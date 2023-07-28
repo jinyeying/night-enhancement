@@ -51,7 +51,8 @@ Wending Yan, [Robby T. Tan](https://tanrobby.github.io/pub.html) and [Dengxin Da
 
 4. [Syn-light-effects](https://www.dropbox.com/sh/2sb9na4ur7ry2gf/AAB1-DNxy4Hq6qPU-afYIKVaa?dl=0) <br>
 Synthetic-light-effects data is the implementation of the paper, <br>
-S. Metari, F. Deschênes, "A New Convolution Kernel for Atmospheric Point Spread Function Applied to Computer Vision", ICCV, 2017. <br>
+* `ICCV2017`
+*A New Convolution Kernel for Atmospheric Point Spread Function Applied to Computer Vision* [[Paper](https://ieeexplore.ieee.org/document/4408899)]\
 Run the Matlab code to generate Syn-light-effects:
 ```
 glow_rendering_code/repro_ICCV2007_Fig5.m

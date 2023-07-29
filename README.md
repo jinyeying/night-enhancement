@@ -2,7 +2,7 @@
 
 ## Introduction
 This is an implementation of the following paper.
-> [Unsupervised Night Image Enhancement: When Layer Decomposition Meets Light-Effects Suppression.](https://arxiv.org/pdf/2207.10564.pdf)\
+> [Unsupervised Night Image Enhancement: When Layer Decomposition Meets Light-Effects Suppression](https://arxiv.org/pdf/2207.10564.pdf)\
 > European Conference on Computer Vision (`ECCV2022`)
 
 [Yeying Jin](https://jinyeying.github.io/), [Wenhan Yang](https://flyywh.github.io/) and [Robby T. Tan](https://tanrobby.github.io/pub.html)
@@ -23,9 +23,9 @@ Night images suffer not only from low light, but also from uneven distributions 
 ## Datasets
 ### Light-Effects Suppression on Night Data
 1. [Light-effects data](https://www.dropbox.com/sh/ro8fs629ldebzc2/AAD_W78jDffsJhH-smJr0cNSa?dl=0) <br>
-Light-effects data is collected from Flickr and by ourselves, with multiple light colors in various scenes: <br>
+Light-effects data is collected from Flickr and by ourselves, with multiple light colors in various scenes. <br>
 * `CVPR2021`
-*Nighttime Visibility Enhancement by Increasing the Dynamic Range and Suppression of Light Effects* [[Paper](https://openaccess.thecvf.com/content/CVPR2021/papers/Sharma_Nighttime_Visibility_Enhancement_by_Increasing_the_Dynamic_Range_and_Suppression_CVPR_2021_paper.pdf)]\
+*Nighttime Visibility Enhancement by Increasing the Dynamic Range and Suppression of Light Effects* [[Paper]](https://openaccess.thecvf.com/content/CVPR2021/papers/Sharma_Nighttime_Visibility_Enhancement_by_Increasing_the_Dynamic_Range_and_Suppression_CVPR_2021_paper.pdf)\
 [Aashish Sharma](https://aasharma90.github.io/) and [Robby T. Tan](https://tanrobby.github.io/pub.html)
 
 <p align="left">
@@ -40,9 +40,9 @@ We captured images with dimmer light as the reference images.
 
 
 3. [GTA5 nighttime fog](https://www.dropbox.com/sh/gfw44ttcu5czrbg/AACr2GZWvAdwYPV0wgs7s00xa?dl=0) <br>
-Synthetic GTA5 nighttime fog data:<br> 
+Synthetic GTA5 nighttime fog data.<br> 
 * `ECCV2020`
-*Nighttime Defogging Using High-Low Frequency Decomposition and Grayscale-Color Networks* [[Paper](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123570460.pdf)]\
+*Nighttime Defogging Using High-Low Frequency Decomposition and Grayscale-Color Networks* [[Paper]](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123570460.pdf)\
 Wending Yan, [Robby T. Tan](https://tanrobby.github.io/pub.html) and [Dengxin Dai](https://vas.mpi-inf.mpg.de/) 
 
 <p align="left">
@@ -52,7 +52,7 @@ Wending Yan, [Robby T. Tan](https://tanrobby.github.io/pub.html) and [Dengxin Da
 4. [Syn-light-effects](https://www.dropbox.com/sh/2sb9na4ur7ry2gf/AAB1-DNxy4Hq6qPU-afYIKVaa?dl=0) <br>
 Synthetic-light-effects data is the implementation of the paper:<br>
 * `ICCV2017`
-*A New Convolution Kernel for Atmospheric Point Spread Function Applied to Computer Vision* [[Paper](https://ieeexplore.ieee.org/document/4408899)]\
+*A New Convolution Kernel for Atmospheric Point Spread Function Applied to Computer Vision* [[Paper]](https://ieeexplore.ieee.org/document/4408899)\
 Run the Matlab code to generate Syn-light-effects:
 ```
 glow_rendering_code/repro_ICCV2007_Fig5.m
@@ -64,8 +64,8 @@ glow_rendering_code/repro_ICCV2007_Fig5.m
 # Light-Effects Suppression Results:
 ## Pre-trained Model
 [Update] We released the light-effects suppression code and checkpoint on May 21, 2023. 
-1. Download the [pre-trained de-light-effects model](https://www.dropbox.com/s/9fif8itsu06quvn/delighteffects_params_0600000.pt?dl=0), put in ./results/delighteffects/model/
-2. Put the test images in ./light-effects/
+1. Download the [pre-trained de-light-effects model](https://www.dropbox.com/s/9fif8itsu06quvn/delighteffects_params_0600000.pt?dl=0), put in `./results/delighteffects/model/`
+2. Put the test images in `./light-effects/`
 
 ## Light-effects Suppression Test
 ```
@@ -73,9 +73,9 @@ python main_delighteffects.py
 ```
 
 ## Demo
-[Update] We have released demo_all.html and demo_all.ipynb code on May 21, 2023. 
+[Update] We released `demo_all.html` and `demo_all.ipynb` code on May 21, 2023. 
 
-Input are in ./light-effects/, Output are in ./light-effects-output/
+Input are in `./light-effects/`, Output are in `./light-effects-output/`
 ```
 demo_all.ipynb
 ```
@@ -83,15 +83,13 @@ demo_all.ipynb
   <img width="950" src="teaser/light_effects.PNG">
 </p>
 
-
-
 [Update] We released the demo code on Dec 28, 2022.
 ```
 python demo.py
 ```
 
 ## Decomposition
-[Update] We released the decomposition code on Dec 28, 2022. 
+[Update] We released the decomposition code on Dec 28, 2022. <br>
 Run the code to decomposition layers, output light-effects layer, and initial background layer.    
 ```
 demo_decomposition.m
@@ -113,8 +111,7 @@ checkGrayMerge.m
   <img width="350" src="VGG_code/results_VGGfeatures/DSC01607_I_GrayBest.png">
 </p>
 
-2. Download the [fine-tuned VGG model](https://www.dropbox.com/s/xzzoruz1i6m7mm0/model_best.tar?dl=0) (fine-tuned on [ExDark (Exclusively Dark Image Dataset)](https://github.com/cs-chan/Exclusively-Dark-Image-Dataset)), put in 
-./VGG_code/ckpts/vgg16_featureextractFalse_ExDark/nets/model_best.tar
+2. Download the [fine-tuned VGG model](https://www.dropbox.com/s/xzzoruz1i6m7mm0/model_best.tar?dl=0) (fine-tuned on [ExDark](https://github.com/cs-chan/Exclusively-Dark-Image-Dataset)), put in `./VGG_code/ckpts/vgg16_featureextractFalse_ExDark/nets/model_best.tar`
 
 3. Obtain structure features.
 ```
@@ -139,8 +136,8 @@ We use LOL-real as it is larger and more diverse.
 # Low-Light Enhancement Results:
 ## Pre-trained Model
 
-1. Download the [pre-trained LOL model](https://www.dropbox.com/s/0ykpsm1d48f74ao/LOL_params_0900000.pt?dl=0), put in ./results/LOL/model/
-2. Put the test images in ./LOL/ 
+1. Download the [pre-trained LOL model](https://www.dropbox.com/s/0ykpsm1d48f74ao/LOL_params_0900000.pt?dl=0), put in `./results/LOL/model/`
+2. Put the test images in `./LOL/` 
 
 ## Low-light Enhancement Test
 ```

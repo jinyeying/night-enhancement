@@ -38,7 +38,6 @@ We captured images with dimmer light as the reference images.
   <img width=350" src="teaser/LED.PNG">
 </p>
 
-
 3. [GTA5 nighttime fog](https://www.dropbox.com/sh/gfw44ttcu5czrbg/AACr2GZWvAdwYPV0wgs7s00xa?dl=0) <br>
 Synthetic GTA5 nighttime fog data.<br> 
 * `ECCV2020`

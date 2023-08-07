@@ -64,7 +64,7 @@ glow_rendering_code/repro_ICCV2007_Fig5.m
 ## Pre-trained Model
 [Update] We released the [light-effects suppression code](https://github.com/jinyeying/night-enhancement/blob/main/main_delighteffects.py) and [checkpoint](https://www.dropbox.com/s/9fif8itsu06quvn/delighteffects_params_0600000.pt?dl=0) on May 21, 2023. 
 1. Download the [pre-trained de-light-effects model](https://www.dropbox.com/s/9fif8itsu06quvn/delighteffects_params_0600000.pt?dl=0), put in `./results/delighteffects/model/`
-2. Put the test images in `./light-effects/`
+2. Put the [test images](https://github.com/jinyeying/night-enhancement/tree/main/light-effects) in `./light-effects/`
 
 ## Light-effects Suppression Test
 ```
@@ -74,7 +74,7 @@ python main_delighteffects.py
 ## Demo
 [Update] We released [demo_all.html](https://github.com/jinyeying/night-enhancement/blob/main/demo_all.html) and [demo_all.ipynb code](https://github.com/jinyeying/night-enhancement/blob/main/demo_all.ipynb) on May 21, 2023. 
 
-Input are in `./light-effects/`, Output are in `./light-effects-output/`
+[Inputs](https://github.com/jinyeying/night-enhancement/tree/main/light-effects) are in `./light-effects/`, [Outputs](https://github.com/jinyeying/night-enhancement/tree/main/light-effects-output) are in `./light-effects-output/`
 ```
 demo_all.ipynb
 ```
@@ -89,7 +89,7 @@ python demo.py
 
 ## Decomposition
 [Update] We released the [decomposition code](https://github.com/jinyeying/night-enhancement/blob/main/decomposition_code/demo_decomposition.m) on Dec 28, 2022. <br>
-Run the code to decomposition layers, output light-effects layer, and initial background layer.    
+Run the code to decomposition layers, output [light-effects layers](https://www.dropbox.com/sh/d7myjujl9gwotkz/AAA0iSsO1FbWqNkbB6QR-sLCa?dl=0), and [initial background layers](https://www.dropbox.com/sh/bis4350df85gz0e/AAC7wY92U9K5JW3aSaD0mvcya?dl=0).    
 ```
 demo_decomposition.m
 ```
@@ -102,7 +102,7 @@ demo_decomposition.m
 </p>
 
 ### Feature Results:
-1. Run the [MATLAB code](https://github.com/jinyeying/night-enhancement/blob/main/VGG_code/checkGrayMerge.m) to adaptively fuse the three color channels, and output I_gray.
+1. Run the [MATLAB code](https://github.com/jinyeying/night-enhancement/blob/main/VGG_code/checkGrayMerge.m) to adaptively fuse the three color channels, and output `I_gray`.
 ```
 checkGrayMerge.m
 ```

@@ -52,7 +52,7 @@ Wending Yan, [Robby T. Tan](https://tanrobby.github.io/pub.html) and [Dengxin Da
 Synthetic-light-effects data is the implementation of the paper:<br>
 * `ICCV2017`
 *A New Convolution Kernel for Atmospheric Point Spread Function Applied to Computer Vision* [[Paper]](https://ieeexplore.ieee.org/document/4408899)\
-Run the Matlab code to generate Syn-light-effects:
+Run the [Matlab code](https://github.com/jinyeying/night-enhancement/blob/main/glow_rendering_code/repro_ICCV2007_Fig5.m) to generate Syn-light-effects:
 ```
 glow_rendering_code/repro_ICCV2007_Fig5.m
 ```
@@ -62,7 +62,7 @@ glow_rendering_code/repro_ICCV2007_Fig5.m
 
 # Light-Effects Suppression Results:
 ## Pre-trained Model
-[Update] We released the light-effects suppression code and checkpoint on May 21, 2023. 
+[Update] We released the [light-effects suppression code](https://github.com/jinyeying/night-enhancement/blob/main/main_delighteffects.py) and [checkpoint](https://www.dropbox.com/s/9fif8itsu06quvn/delighteffects_params_0600000.pt?dl=0) on May 21, 2023. 
 1. Download the [pre-trained de-light-effects model](https://www.dropbox.com/s/9fif8itsu06quvn/delighteffects_params_0600000.pt?dl=0), put in `./results/delighteffects/model/`
 2. Put the test images in `./light-effects/`
 
@@ -72,7 +72,7 @@ python main_delighteffects.py
 ```
 
 ## Demo
-[Update] We released `demo_all.html` and `demo_all.ipynb` code on May 21, 2023. 
+[Update] We released [demo_all.html](https://github.com/jinyeying/night-enhancement/blob/main/demo_all.html) and [demo_all.ipynb code](https://github.com/jinyeying/night-enhancement/blob/main/demo_all.ipynb) on May 21, 2023. 
 
 Input are in `./light-effects/`, Output are in `./light-effects-output/`
 ```
@@ -82,13 +82,13 @@ demo_all.ipynb
   <img width="950" src="teaser/light_effects.PNG">
 </p>
 
-[Update] We released the demo code on Dec 28, 2022.
+[Update] We released the [demo.py code](https://github.com/jinyeying/night-enhancement/blob/main/demo.py) on Dec 28, 2022.
 ```
 python demo.py
 ```
 
 ## Decomposition
-[Update] We released the decomposition code on Dec 28, 2022. <br>
+[Update] We released the [decomposition code](https://github.com/jinyeying/night-enhancement/blob/main/decomposition_code/demo_decomposition.m) on Dec 28, 2022. <br>
 Run the code to decomposition layers, output light-effects layer, and initial background layer.    
 ```
 demo_decomposition.m
@@ -102,7 +102,7 @@ demo_decomposition.m
 </p>
 
 ### Feature Results:
-1. Run the MATLAB code to adaptively fuse the three color channels, and output I_gray.
+1. Run the [MATLAB code](https://github.com/jinyeying/night-enhancement/blob/main/VGG_code/checkGrayMerge.m) to adaptively fuse the three color channels, and output I_gray.
 ```
 checkGrayMerge.m
 ```

@@ -190,7 +190,15 @@ If this work is useful for your research, please cite our paper.
   organization={Springer}
 }
 ```
-
+```BibTeX
+@inproceedings{jin2023enhancing,
+  title={Enhancing visibility in nighttime haze images using guided apsf and gradient adaptive convolution},
+  author={Jin, Yeying and Lin, Beibei and Yan, Wending and Yuan, Yuan and Ye, Wei and Tan, Robby T},
+  booktitle={Proceedings of the 31st ACM International Conference on Multimedia},
+  pages={2446--2457},
+  year={2023}
+}
+```
 If light-effects data is useful for your research, please cite the paper. 
 ```BibTeX
 @inproceedings{sharma2021nighttime,

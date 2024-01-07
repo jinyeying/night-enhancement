@@ -177,6 +177,12 @@ Get the following Table 3 in the main paper on the LOL-test dataset (15 test ima
   <img width="450" src="teaser/LOL.PNG">
 </p>
 
+## License
+The code and models in this repository are licensed under the MIT License for academic and other non-commercial uses.<br>
+For commercial use of the code and models, separate commercial licensing is available. Please contact:
+- Yeying Jin (jinyeying@u.nus.edu)
+- Robby T. Tan (tanrobby@gmail.com)
+- Jonathan Tan (jonathan_tano@nus.edu.sg)
 
 ### Citations
 If this work is useful for your research, please cite our paper. 
@@ -207,17 +213,5 @@ If light-effects data is useful for your research, please cite the paper.
 	booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
 	pages={11977--11986},
 	year={2021}
-}
-```
-
-If GTA5 nighttime fog data is useful for your research, please cite the paper. 
-```BibTeX
-@inproceedings{yan2020nighttime,
-	title={Nighttime defogging using high-low frequency decomposition and grayscale-color networks},
-	author={Yan, Wending and Tan, Robby T and Dai, Dengxin},
-	booktitle={European Conference on Computer Vision},
-	pages={473--488},
-	year={2020},
-	organization={Springer}
 }
 ```

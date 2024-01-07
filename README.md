@@ -15,7 +15,7 @@ This is an implementation of the following paper.
 [[Link]](https://mp.weixin.qq.com/s/5wjV6R95SrQHXxqMnENAAw)
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/unsupervised-night-image-enhancement-when/low-light-image-enhancement-on-lol)](https://paperswithcode.com/sota/low-light-image-enhancement-on-lol?p=unsupervised-night-image-enhancement-when)
-[![Replicate](https://replicate.com/cjwbw/night-enhancement/badge)](https://replicate.com/cjwbw/night-enhancement)
+🔥[![Replicate](https://replicate.com/cjwbw/night-enhancement/badge)](https://replicate.com/cjwbw/night-enhancement)🔥
 
 ### Abstract
 Night images suffer not only from low light, but also from uneven distributions of light. Most existing night visibility enhancement methods focus mainly on enhancing low-light regions. This inevitably leads to over enhancement and saturation in bright regions, such as those regions affected by light effects (glare, floodlight, etc). To address this problem, we need to suppress the light effects in bright regions while, at the same time, boosting the intensity of dark regions. With this idea in mind, we introduce an unsupervised method that integrates a layer decomposition network and a light-effects suppression network. Given a single night image as input, our decomposition network learns to decompose shading, reflectance and light-effects layers, guided by unsupervised layer-specific prior losses. Our light-effects suppression network further suppresses the light effects and, at the same time, enhances the illumination in dark regions. This light-effects suppression network exploits the estimated light-effects layer as the guidance to focus on the light-effects regions. To recover the background details and reduce hallucination/artefacts, we propose structure and high-frequency consistency losses. Our quantitative and qualitative evaluations on real images show that our method outperforms state-of-the-art methods in suppressing night light effects and boosting the intensity of dark regions.
@@ -138,7 +138,13 @@ We use LOL-real as it is larger and more diverse.
 1. Download the [pre-trained LOL model](https://www.dropbox.com/s/0ykpsm1d48f74ao/LOL_params_0900000.pt?dl=0), put in `./results/LOL/model/`
 2. Put the test images in `./LOL/` 
 
-## Low-light Enhancement Test
+## Low-light Enhancement Test 
+
+🔥[![Replicate](https://replicate.com/cjwbw/night-enhancement/badge)](https://replicate.com/cjwbw/night-enhancement)🔥 Online test: https://replicate.com/cjwbw/night-enhancement
+<p align="left">
+  <img width="750" src="teaser/lowlight_enhance.png">
+</p>
+
 ```
 python main.py
 ```

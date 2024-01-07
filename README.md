@@ -195,8 +195,7 @@ If this work is useful for your research, please cite our paper.
   year={2022},
   organization={Springer}
 }
-```
-```BibTeX
+
 @inproceedings{jin2023enhancing,
   title={Enhancing visibility in nighttime haze images using guided apsf and gradient adaptive convolution},
   author={Jin, Yeying and Lin, Beibei and Yan, Wending and Yuan, Yuan and Ye, Wei and Tan, Robby T},

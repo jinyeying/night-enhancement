@@ -67,7 +67,7 @@ glow_rendering_code/repro_ICCV2007_Fig5.m
 # 3. Low-Light Enhancement Results:
 ## Pre-trained Model
 1. Download the pre-trained LOL model [[Dropbox]](https://www.dropbox.com/s/0ykpsm1d48f74ao/LOL_params_0900000.pt?dl=0) | [[BaiduPan (code:lol2)]](https://pan.baidu.com/s/10VL4ZhV13zfokmRSBTOKyg?pwd=lol2), put in `./results/LOL/model/`
-2. Put the test images in `./LOL/` 
+2. Put the test images in `./LOL/`
 
 ## Low-light Enhancement Test 
 🔥[![Replicate](https://replicate.com/cjwbw/night-enhancement/badge)](https://replicate.com/cjwbw/night-enhancement)🔥 Online test: https://replicate.com/cjwbw/night-enhancement
@@ -77,6 +77,16 @@ glow_rendering_code/repro_ICCV2007_Fig5.m
 
 ```
 python main.py
+```
+
+## Low-light Enhancement Train
+There is no decomposition, light-effects guidance for low-light enhancement. 
+<p align="left">
+  <img width="750" src="teaser/lowlight_enhancement.PNG">
+</p>
+
+```
+CUDA_VISIBLE_DEVICES=1 python main.py --dataset LOL --phase train --datasetpath /home1/yeying/data/LOL_Cap/
 ```
 
 ## Results
@@ -121,8 +131,13 @@ PSNR: 20.85 (vs EnlightenGAN's 18.23), SSIM: 0.7243 (vs EnlightenGAN's 0.61).
 ```
 python main_delighteffects.py
 ```
-## [Demo](https://github.com/jinyeying/night-enhancement/blob/main/demo_all.html) 
-[Inputs](https://github.com/jinyeying/night-enhancement/tree/main/light-effects) are in `./light-effects/`, [Outputs](https://github.com/jinyeying/night-enhancement/tree/main/light-effects-output) are in `./light-effects-output/`
+## [Decomposition1](https://github.com/jinyeying/night-enhancement/blob/main/demo_all.html) 
+<p align="left">
+  <img width="550" src="teaser/demo.PNG">
+</p>
+
+[Inputs](https://github.com/jinyeying/night-enhancement/tree/main/light-effects) are in `./light-effects/`, [Outputs](https://github.com/jinyeying/night-enhancement/tree/main/light-effects-output) are in `./light-effects-output/`. <br>
+`Inputs` and `Outputs` are `trainA` and `trainB` for the translation network.
 ```
 demo_all.ipynb
 ```
@@ -133,10 +148,13 @@ python demo.py
   <img width="950" src="teaser/light_effects.PNG">
 </p>
 
-## [Decomposition](https://github.com/jinyeying/night-enhancement/blob/main/decomposition_code/demo_decomposition.m)
+
+## [Decomposition2](https://github.com/jinyeying/night-enhancement/blob/main/decomposition_code/demo_decomposition.m)
 ```
 demo_decomposition.m
 ```
+`Inputs` and `Initial Background Results` are `trainA` and `trainB` for the translation network.
+
 | Initial Background Results [[Dropbox]](https://www.dropbox.com/sh/bis4350df85gz0e/AAC7wY92U9K5JW3aSaD0mvcya?dl=0) | Light-Effects Results [[Dropbox]](https://www.dropbox.com/sh/d7myjujl9gwotkz/AAA0iSsO1FbWqNkbB6QR-sLCa?dl=0) | Shading Results [[Dropbox]](https://www.dropbox.com/sh/venya8tvetyiv07/AABud1xlWGVquKptBsIZ0jxpa?dl=0) |
 | :-----------: | :-----------: |:-----------: |
 | [[BaiduPan (code:jjjj)]](https://pan.baidu.com/s/1a0C90-GZjGR38pt5qlam-g?pwd=jjjj) | [[BaiduPan (code:lele)]](https://pan.baidu.com/s/1o-Gcy1rOwuqaMtpDGIH9iw?pwd=lele) |  [[BaiduPan (code:llll)]](https://pan.baidu.com/s/1OzjE1mp4VZhP_IAKC-TLYg?pwd=llll)|
@@ -144,6 +162,12 @@ demo_decomposition.m
 <p align="left">
   <img width="550" src="teaser/decomposition.png">
 </p>
+
+
+## Light-effects Suppression Train
+```
+CUDA_VISIBLE_DEVICES=1 python main.py --dataset delighteffects --phase train --datasetpath /home1/yeying/data/light-effects/
+```
 
 ### Feature Results:
 1. Run the [MATLAB code](https://github.com/jinyeying/night-enhancement/blob/main/VGG_code/checkGrayMerge.m) to adaptively fuse the three color channels, and output `I_gray`.

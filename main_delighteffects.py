@@ -8,7 +8,7 @@ def parse_args():
     parser.add_argument('--phase', type=str, default='test', help='[train / test]')
     parser.add_argument('--dataset', type=str, default='delighteffects', help='dataset_name')
     parser.add_argument('--datasetpath', type=str, default='./light-effects/', help='dataset_path')
-    parser.add_argument('--iteration', type=int, default=900000, help='The number of training iterations')
+    parser.add_argument('--iteration', type=int, default=1000000, help='The number of training iterations')
     parser.add_argument('--batch_size', type=int, default=1, help='The size of batch size')
     parser.add_argument('--print_freq', type=int, default=1000, help='The number of image print freq')
     parser.add_argument('--save_freq', type=int, default=100000, help='The number of model save freq')
@@ -16,11 +16,12 @@ def parse_args():
 
     parser.add_argument('--lr', type=float, default=0.0001, help='The learning rate')
     parser.add_argument('--weight_decay', type=float, default=0.0001, help='The weight decay')
-    parser.add_argument('--atten_weight', type=int, default=0.5, help='Weight for Attention Loss')
-    parser.add_argument('--use_gray_feat_loss', type=str2bool, default=True, help='use Structure and HF-Features Consistency Losses')
-    parser.add_argument('--feat_weight', type=int, default=1, help='Weight for Structure and HF-Features Consistency Losses')
-    parser.add_argument('--adv_weight', type=int, default=1, help='Weight for GAN Loss')
-    parser.add_argument('--identity_weight', type=int, default=5, help='Weight for Identity Loss')
+    parser.add_argument('--atten_weight', type=int, default=0.0001, help='Weight for Attention Loss')
+    parser.add_argument('--use_decomp_loss', type=str2bool, default=True, help='use Decomposition Loss')
+    parser.add_argument('--decomp_weight', type=int, default=1, help='Weight for Decomposition Loss')
+    parser.add_argument('--identity_weight', type=int, default=10, help='Weight for Identity Loss')
+    parser.add_argument('--adv_weight', type=int, default=1, help='Weight for GAN')
+    parser.add_argument('--cycle_weight', type=int, default=10, help='Weight for Cycle')
 
     parser.add_argument('--ch', type=int, default=64, help='base channel number per layer')
     parser.add_argument('--n_res', type=int, default=4, help='The number of resblock')
@@ -41,6 +42,7 @@ def parse_args():
 """checking arguments"""
 def check_args(args):
     check_folder(os.path.join(args.result_dir, args.dataset, 'model'))
+    check_folder(os.path.join(args.result_dir, args.dataset, 'train_img'))
     try:
         assert args.epoch >= 1
     except:
@@ -59,11 +61,15 @@ def main():
 
     gan = ENHANCENET(args)
 
-    gan.build_model()
-
     if args.phase == 'test' :
+        gan.build_model()
         gan.test()
         print(" Test finished!")
 
+    if args.phase == 'train' :
+        gan.build_train_model()        
+        gan.train()
+        print(" Training finished!")
+        
 if __name__ == '__main__':
     main()

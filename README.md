@@ -103,7 +103,7 @@ Get the following Table 3 in the main paper on the LOL-test dataset.
 | N/A | Input | 7.773 | 0.1259|
 
 <p align="left">
-  <img width="450" src="teaser/LOL.PNG">
+  <img width="350" src="teaser/LOL.PNG">
 </p>
 
 2. LOL-Real Results (100 test images) [[Dropbox]](https://www.dropbox.com/sh/t6eb4aq025ctnhy/AADRRJNN3u-N8HApe1tFo19Ra?dl=0) | [[BaiduPan (code:lolc)]](https://pan.baidu.com/s/1DlRc53HsFXbZe4gch3kVcw?pwd=lolc)<br>
@@ -116,7 +116,7 @@ Get the following Table 4 in the main paper on the LOL-Real dataset.
 | N/A | Input | 9.72 | 0.1752|
 
 <p align="left">
-  <img width="550" src="teaser/LOL_real.PNG">
+  <img width="350" src="teaser/LOL_real.PNG">
 </p>
 
 Re-train (train from scratch) in LOL_V2_real (698 train images), and test on LOL_V2_real [[Dropbox]](https://www.dropbox.com/sh/7t1qgl4anlqcvle/AAAyOUHMoG5IkzCX5GQDPd1Oa?dl=0) | [[BaiduPan (code:lol2)]](https://pan.baidu.com/s/1HfPb6tJy7Nv7L9reukJ3Cw?pwd=lol2 ).<br>
@@ -131,12 +131,12 @@ PSNR: 20.85 (vs EnlightenGAN's 18.23), SSIM: 0.7243 (vs EnlightenGAN's 0.61).
 ```
 python main_delighteffects.py
 ```
-## [Decomposition1](https://github.com/jinyeying/night-enhancement/blob/main/demo_all.html) 
+## [Decomposition1](demo_all.html) 
 <p align="left">
-  <img width="550" src="teaser/demo.PNG">
+  <img width="350" src="teaser/demo1.png">
 </p>
 
-[Inputs](https://github.com/jinyeying/night-enhancement/tree/main/light-effects) are in `./light-effects/`, [Outputs](https://github.com/jinyeying/night-enhancement/tree/main/light-effects-output) are in `./light-effects-output/`. <br>
+[Inputs](./light-effects) are in `./light-effects/`, [Outputs](./light-effects-output) are in `./light-effects-output/`. <br>
 `Inputs` and `Outputs` are `trainA` and `trainB` for the translation network.
 ```
 demo_all.ipynb
@@ -148,8 +148,18 @@ python demo.py
   <img width="950" src="teaser/light_effects.PNG">
 </p>
 
+## [Decomposition2](demo_separation.py) 
+<p align="left">
+  <img width="350" src="teaser/demo2.png">
+</p>
 
-## [Decomposition2](https://github.com/jinyeying/night-enhancement/blob/main/decomposition_code/demo_decomposition.m)
+[Inputs](./light-effects) are in `./light-effects/`, [Outputs](./light-effects-output/DSC01065/) are in `./light-effects-output/DSC01065/`. <br>
+`Inputs` and `Outputs` are `trainA` and `trainB` for the translation network.
+```
+python demo_separation.py --img_name DSC01065.JPG 
+```
+
+## [Decomposition3](./decomposition_code/demo_decomposition.m)
 ```
 demo_decomposition.m
 ```
@@ -160,7 +170,7 @@ demo_decomposition.m
 | [[BaiduPan (code:jjjj)]](https://pan.baidu.com/s/1a0C90-GZjGR38pt5qlam-g?pwd=jjjj) | [[BaiduPan (code:lele)]](https://pan.baidu.com/s/1o-Gcy1rOwuqaMtpDGIH9iw?pwd=lele) |  [[BaiduPan (code:llll)]](https://pan.baidu.com/s/1OzjE1mp4VZhP_IAKC-TLYg?pwd=llll)|
 
 <p align="left">
-  <img width="550" src="teaser/decomposition.png">
+  <img width="350" src="teaser/decomposition.png">
 </p>
 
 
@@ -187,7 +197,7 @@ python test_VGGfeatures.py
 
 ## Summary of Comparisons:
 <p align="left">
-  <img width="550" src="teaser/comparison.png">
+  <img width="350" src="teaser/comparison.png">
 </p>
 
 ## License

@@ -208,7 +208,8 @@ For commercial use of the code and models, separate commercial licensing is avai
 - Jonathan Tan (jonathan_tano@nus.edu.sg)
 
 ## Acknowledgments
-Translation Code is implemented based on [U-GAT-IT](https://github.com/znxlwm/UGATIT-pytorch), we would like to thank them.
+The decomposition code is implemented based on [DoubleDIP](https://github.com/yossigandelsman/DoubleDIP/blob/master/transparency_separation.py), [Layer Seperation](https://github.com/yu-li/yu-li.github.io/blob/master/paper/li_cvpr14_layer.zip) and LIME.<br>
+The translation code is implemented based on [U-GAT-IT](https://github.com/znxlwm/UGATIT-pytorch), we would like to thank them.
 <br> One trick used in `networks.py` is to change `out = self.UpBlock2(x)` to [out = (self.UpBlock2(x)+input).tanh()](https://github.com/jinyeying/night-enhancement/blob/main/networks.py#L96) to learn a residual.
 
 ### Citations

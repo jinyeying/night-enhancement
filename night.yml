@@ -142,3 +142,4 @@ dependencies:
     - thop==0.0.31-2005241907
     - tifffile==2021.7.2
     - tqdm==4.61.2
+    - typing-extensions==4.12.2

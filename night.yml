@@ -142,4 +142,3 @@ dependencies:
     - thop==0.0.31-2005241907
     - tifffile==2021.7.2
     - tqdm==4.61.2
-prefix: /home/yeying/anaconda3/envs/night

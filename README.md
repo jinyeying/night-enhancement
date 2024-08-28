@@ -13,9 +13,19 @@ This is an implementation of the following paper.
 [[Poster]](https://github.com/jinyeying/night-enhancement/blob/main/poster_slides/0982_poster.pdf) 
 [[Slides]](https://github.com/jinyeying/night-enhancement/blob/main/poster_slides/0982_slides.pdf) 
 [[Link]](https://mp.weixin.qq.com/s/5wjV6R95SrQHXxqMnENAAw)
+[[Video]](https://www.bilibili.com/video/BV1Ec411s7at/?share_source=copy_web&vd_source=de01cad5025255c4901de808728937c0)
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/unsupervised-night-image-enhancement-when/low-light-image-enhancement-on-lol)](https://paperswithcode.com/sota/low-light-image-enhancement-on-lol?p=unsupervised-night-image-enhancement-when)
 🔥[![Replicate](https://replicate.com/cjwbw/night-enhancement/badge)](https://replicate.com/cjwbw/night-enhancement)🔥
+
+
+## Prerequisites, or follow [bilibili](https://www.bilibili.com/video/BV1Nv4y1B7Mp/?spm_id_from=333.337.search-card.all.click)
+```
+git clone https://github.com/jinyeying/night-enhancement.git
+cd night-enhancement/
+conda env create -f night.yml
+conda activate night
+```
 
 ## Datasets
 ### 1. Light-Effects Suppression on Night Data

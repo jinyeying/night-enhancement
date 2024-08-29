@@ -10,6 +10,11 @@ from cv2 import resize
 from demo import *
 from Net import *
 
+IMG_EXTENSIONS = [
+    '.jpg', '.JPG', '.jpeg', '.JPEG',
+    '.png', '.PNG', '.ppm', '.PPM', '.bmp', '.BMP',
+]
+
 class RhoClipper(object):
     def __init__(self, min, max):
         self.clip_min = min
@@ -396,11 +401,13 @@ class ENHANCENET(object) :
                 if not os.path.exists(path_fakeB):
                     os.makedirs(path_fakeB)
 
-                self.gt_list = [os.path.splitext(f)[0] for f in os.listdir(os.path.join(self.datasetpath)) if f.endswith(self.im_suf_A)]
-                for n, img_name in enumerate(self.gt_list):
-                    print('predicting: %d / %d' % (n + 1, len(self.gt_list)))
-                    
-                    img = Image.open(os.path.join(self.datasetpath,  img_name + self.im_suf_A)).convert('RGB')
+                self.test_list = [os.path.splitext(f) for f in os.listdir(os.path.join(self.datasetpath)) if any(f.endswith(suffix) for suffix in IMG_EXTENSIONS)]
+                for n, in_name in enumerate(self.test_list):
+                    print('predicting: %d / %d' % (n + 1, len(self.test_list)))
+                    img_name = in_name[0]
+                    img_suf  = in_name[-1]
+                    img = Image.open(os.path.join(self.datasetpath, img_name + img_suf)).convert('RGB')
+
                     img_width, img_height =img.size
                     
                     real_A = (self.test_transform(img).unsqueeze(0)).to(self.device)
@@ -408,7 +415,6 @@ class ENHANCENET(object) :
                     fake_A2B, _, _ = self.genA2B(real_A)
                     
                     A_real = RGB2BGR(tensor2numpy(denorm(real_A[0])))
-
                     B_fake = RGB2BGR(tensor2numpy(denorm(fake_A2B[0])))
                     A_real = resize(A_real, (img_width, img_height))
                     B_fake = resize(B_fake, (img_width, img_height))

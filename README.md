@@ -23,12 +23,14 @@ This is an implementation of the following paper.
 ```
 git clone https://github.com/jinyeying/night-enhancement.git
 cd night-enhancement/
-conda env create -f night.yml
+conda create -n night python=3.7
 conda activate night
+conda install pytorch=1.10.2 torchvision torchaudio cudatoolkit=11.3 -c pytorch
+python3 -m pip install -r requirements.txt
 ```
 
 ## Datasets
-### 1. Light-Effects Suppression on Night Data
+### Light-Effects Suppression on Night Data
 1. Light-effects data [[Dropbox]](https://www.dropbox.com/sh/ro8fs629ldebzc2/AAD_W78jDffsJhH-smJr0cNSa?dl=0) | [[BaiduPan (code:self)]](https://pan.baidu.com/s/1x6HHdi-YlO7USkNQrp23ng?pwd=self) <br>
 Light-effects data is collected from Flickr and by ourselves, with multiple light colors in various scenes. <br>
 * `CVPR2021`
@@ -67,14 +69,7 @@ glow_rendering_code/repro_ICCV2007_Fig5.m
   <img width=350" src="teaser/syn.PNG">
 </p>
 
-### 2. Low-Light Enhancement Data
-1. [LOL dataset](https://daooshee.github.io/BMVC2018website/) <br>
-"Deep Retinex Decomposition for Low-Light Enhancement", BMVC, 2018. [[Baiduyun (code:sdd0)]](https://pan.baidu.com/s/1spt0kYU3OqsQSND-be4UaA) | [[Google Drive]](https://drive.google.com/file/d/18bs_mAREhLipaM2qvhxs7u7ff2VSHet2/view?usp=sharing) <br>
-
-2. [LOL-Real dataset](https://github.com/flyywh/CVPR-2020-Semi-Low-Light/) <br>
-"Sparse Gradient Regularized Deep Retinex Network for Robust Low-Light Image Enhancement", TIP, 2021. [[Baiduyun (code:l9xm)]](https://pan.baidu.com/s/1U9ePTfeLlnEbr5dtI1tm5g) | [[Google Drive]](https://drive.google.com/file/d/1dzuLCk9_gE2bFF222n3-7GVUlSVHpMYC/view?usp=sharing) <br> 
-
-# 3. Low-Light Enhancement Results:
+# 1. Low-Light Enhancement:
 ## Pre-trained Model
 1. Download the pre-trained LOL model [[Dropbox]](https://www.dropbox.com/s/0ykpsm1d48f74ao/LOL_params_0900000.pt?dl=0) | [[BaiduPan (code:lol2)]](https://pan.baidu.com/s/10VL4ZhV13zfokmRSBTOKyg?pwd=lol2), put in `./results/LOL/model/`
 2. Put the test images in `./LOL/`
@@ -90,16 +85,32 @@ python main.py
 ```
 
 ## Low-light Enhancement Train
-There is no decomposition, light-effects guidance for low-light enhancement. 
+1. Download Low-Light Enhancement Dataset
+
+1.1 [LOL dataset](https://daooshee.github.io/BMVC2018website/) <br>
+"Deep Retinex Decomposition for Low-Light Enhancement", BMVC, 2018. [[Baiduyun (code:sdd0)]](https://pan.baidu.com/s/1spt0kYU3OqsQSND-be4UaA) | [[Google Drive]](https://drive.google.com/file/d/18bs_mAREhLipaM2qvhxs7u7ff2VSHet2/view?usp=sharing) <br>
+
+1.2 [LOL_Cap dataset](https://github.com/flyywh/CVPR-2020-Semi-Low-Light/) <br>
+"Sparse Gradient Regularized Deep Retinex Network for Robust Low-Light Image Enhancement", TIP, 2021. [[Baiduyun (code:l9xm)]](https://pan.baidu.com/s/1U9ePTfeLlnEbr5dtI1tm5g) | [[Google Drive]](https://drive.google.com/file/d/1dzuLCk9_gE2bFF222n3-7GVUlSVHpMYC/view?usp=sharing) <br> 
+
+```
+|-- LOL_Cap
+    |-- trainA ## Low 
+    |-- trainB ## Normal
+    |-- testA  ## Low 
+    |-- testB  ## Normal
+
+```
+
+2. There is no decomposition, light-effects guidance for low-light enhancement. 
+```
+CUDA_VISIBLE_DEVICES=1 python main.py --dataset LOL --phase train --datasetpath /home1/yeying/data/LOL_Cap/
+```
 <p align="left">
   <img width="750" src="teaser/lowlight_enhancement.PNG">
 </p>
 
-```
-CUDA_VISIBLE_DEVICES=1 python main.py --dataset LOL --phase train --datasetpath /home1/yeying/data/LOL_Cap/
-```
-
-## Results
+## Low-light Enhancement Results
 <p align="left">
   <img width="750" src="teaser/lowlight.PNG">
 </p>
@@ -116,10 +127,9 @@ Get the following Table 3 in the main paper on the LOL-test dataset.
   <img width="350" src="teaser/LOL.PNG">
 </p>
 
-2. LOL-Real Results (100 test images) [[Dropbox]](https://www.dropbox.com/sh/t6eb4aq025ctnhy/AADRRJNN3u-N8HApe1tFo19Ra?dl=0) | [[BaiduPan (code:lolc)]](https://pan.baidu.com/s/1DlRc53HsFXbZe4gch3kVcw?pwd=lolc)<br>
+2. LOL_Cap Results (100 test images) [[Dropbox]](https://www.dropbox.com/sh/t6eb4aq025ctnhy/AADRRJNN3u-N8HApe1tFo19Ra?dl=0) | [[BaiduPan (code:lolc)]](https://pan.baidu.com/s/1DlRc53HsFXbZe4gch3kVcw?pwd=lolc)<br>
 
 Get the following Table 4 in the main paper on the LOL-Real dataset.
-
 |Learning| Method | PSNR | SSIM | 
 |--------|--------|------|------ |
 | Unsupervised Learning| **Ours** | **25.51** |**0.8015**|
@@ -132,7 +142,7 @@ Get the following Table 4 in the main paper on the LOL-Real dataset.
 Re-train (train from scratch) in LOL_V2_real (698 train images), and test on LOL_V2_real [[Dropbox]](https://www.dropbox.com/sh/7t1qgl4anlqcvle/AAAyOUHMoG5IkzCX5GQDPd1Oa?dl=0) | [[BaiduPan (code:lol2)]](https://pan.baidu.com/s/1HfPb6tJy7Nv7L9reukJ3Cw?pwd=lol2 ).<br>
 PSNR: 20.85 (vs EnlightenGAN's 18.23), SSIM: 0.7243 (vs EnlightenGAN's 0.61).
 
-# 4. Light-Effects Suppression Results:
+# 2. Light-Effects Suppression:
 ## Pre-trained Model
 1. Download the pre-trained de-light-effects model [[Dropbox]](https://www.dropbox.com/s/9fif8itsu06quvn/delighteffects_params_0600000.pt?dl=0) | [[BaiduPan (code:dele)]](https://pan.baidu.com/s/1mvNiK3H-llUx56SDpDeS7g?pwd=dele), put in `./results/delighteffects/model/`
 2. Put the [test images](https://github.com/jinyeying/night-enhancement/tree/main/light-effects) in `./light-effects/`
@@ -168,7 +178,6 @@ python demo.py
 ```
 python demo_separation.py --img_name DSC01065.JPG 
 ```
-
 ## [Decomposition3](./decomposition_code/demo_decomposition.m)
 ```
 demo_decomposition.m
@@ -182,7 +191,6 @@ demo_decomposition.m
 <p align="left">
   <img width="350" src="teaser/decomposition.png">
 </p>
-
 
 ## Light-effects Suppression Train
 ```
